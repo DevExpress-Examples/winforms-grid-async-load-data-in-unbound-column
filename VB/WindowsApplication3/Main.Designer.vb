@@ -29,16 +29,16 @@ Namespace DXSample
 			Me.defaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
 			Me.gridControl1 = New DevExpress.XtraGrid.GridControl()
 			Me.ordersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-			Me.nwindDataSet = New DXSample.nwindDataSet()
-			Me.gridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+            Me.nwindDataSet = New nwindDataSet()
+            Me.gridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
 			Me.colOrderID = New DevExpress.XtraGrid.Columns.GridColumn()
 			Me.colCustomerID = New DevExpress.XtraGrid.Columns.GridColumn()
 			Me.colEmployeeID = New DevExpress.XtraGrid.Columns.GridColumn()
 			Me.colFreight = New DevExpress.XtraGrid.Columns.GridColumn()
 			Me.colShipName = New DevExpress.XtraGrid.Columns.GridColumn()
 			Me.gridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.ordersTableAdapter = New DXSample.nwindDataSetTableAdapters.OrdersTableAdapter()
-			CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.ordersTableAdapter = New nwindDataSetTableAdapters.OrdersTableAdapter()
+            CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
 			CType(Me.ordersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
 			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
 			CType(Me.gridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -149,8 +149,8 @@ Namespace DXSample
 		Private WithEvents gridView1 As DevExpress.XtraGrid.Views.Grid.GridView
 		Private nwindDataSet As nwindDataSet
 		Private ordersBindingSource As System.Windows.Forms.BindingSource
-		Private ordersTableAdapter As DXSample.nwindDataSetTableAdapters.OrdersTableAdapter
-		Private colOrderID As DevExpress.XtraGrid.Columns.GridColumn
+        Private ordersTableAdapter As nwindDataSetTableAdapters.OrdersTableAdapter
+        Private colOrderID As DevExpress.XtraGrid.Columns.GridColumn
 		Private colCustomerID As DevExpress.XtraGrid.Columns.GridColumn
 		Private colEmployeeID As DevExpress.XtraGrid.Columns.GridColumn
 		Private colFreight As DevExpress.XtraGrid.Columns.GridColumn
