@@ -24,7 +24,7 @@ private object GetSummaryValue(DevExpress.XtraGrid.Views.Base.CustomColumnDataEv
 }
 ```
 
-The `GetDataAsync` asynchronously loads row data:
+`GetDataAsync` asynchronously loads row data:
 
 ```csharp
 private void GetDataAsync(int index) {
