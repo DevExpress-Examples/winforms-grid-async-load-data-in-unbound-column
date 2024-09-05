@@ -12,15 +12,16 @@ Option Strict On
 Option Explicit On
 
 
-
-<Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
- Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0"),  _
- Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
-Partial Friend NotInheritable Class Settings
-    Inherits Global.System.Configuration.ApplicationSettingsBase
+Namespace My
     
-    Private Shared defaultInstance As Settings = CType(Global.System.Configuration.ApplicationSettingsBase.Synchronized(New Settings()),Settings)
-    
+    <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.10.0.0"),  _
+     Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
+    Partial Friend NotInheritable Class Settings
+        Inherits Global.System.Configuration.ApplicationSettingsBase
+        
+        Private Shared defaultInstance As Settings = CType(Global.System.Configuration.ApplicationSettingsBase.Synchronized(New Settings()),Settings)
+        
 #Region "My.Settings Auto-Save Functionality"
 #If _MyType = "WindowsForms" Then
     Private Shared addedHandler As Boolean
@@ -35,10 +36,10 @@ Partial Friend NotInheritable Class Settings
     End Sub
 #End If
 #End Region
-    
-    Public Shared ReadOnly Property [Default]() As Settings
-        Get
-            
+        
+        Public Shared ReadOnly Property [Default]() As Settings
+            Get
+                
 #If _MyType = "WindowsForms" Then
                If Not addedHandler Then
                     SyncLock addedHandlerLockObject
@@ -49,20 +50,21 @@ Partial Friend NotInheritable Class Settings
                     End SyncLock
                 End If
 #End If
-            Return defaultInstance
-        End Get
-    End Property
-    
-    <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\nwind.mdb")>  _
-    Public ReadOnly Property nwindConnectionString() As String
-        Get
-            Return CType(Me("nwindConnectionString"),String)
-        End Get
-    End Property
-End Class
+                Return defaultInstance
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\nwind.mdb")>  _
+        Public ReadOnly Property nwindConnectionString() As String
+            Get
+                Return CType(Me("nwindConnectionString"),String)
+            End Get
+        End Property
+    End Class
+End Namespace
 
 Namespace My
     
@@ -72,9 +74,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.Settings
+        Friend ReadOnly Property Settings() As Global.My.Settings
             Get
-                Return Global.Settings.Default
+                Return Global.My.Settings.Default
             End Get
         End Property
     End Module
